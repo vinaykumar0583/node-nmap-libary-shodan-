@@ -9,7 +9,7 @@ osandports.on("complete", function (data) {
   console.log(JSON.stringify(data, null, 4));
   const insert = async () => {
     const db = await dbConnect();
-    const result = await db.insertOne({ data });
+    const result = await db.insertOne(data[0]);
     if (result.acknowledged) {
       console.log("data inserted");
     }
