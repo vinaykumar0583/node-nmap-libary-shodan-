@@ -12,7 +12,8 @@ osandports.on("complete", function (data) {
     const result = await db.insertOne(data[0]);
     if (result.acknowledged) {
       console.log("data inserted");
-    }
+    }else{
+       console.log("data is not inserted");
   };
   insert();
 });
